@@ -1,6 +1,6 @@
-/* Body styling with cakes background */
+/* Body styling with confetti.webp background */
 body {
-    background-image: url('cakes.jpg'); /* Use cakes.jpg as background */
+    background-image: url('confetti.webp'); /* Use confetti.webp as background */
     background-size: cover;
     background-position: center;
     font-family: 'Arial', sans-serif;
@@ -29,35 +29,22 @@ h1 {
 }
 
 /* Surprise button styling */
-button {
+.surprise-button {
+    display: inline-block;
     padding: 10px 20px;
     font-size: 1rem;
     color: white;
     background-color: #ff6699;
     border: none;
     border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+.surprise-button:hover {
     background-color: #ff3366;
-}
-
-/* Hidden class for surprise message */
-.hidden {
-    display: none;
-}
-
-/* Surprise message styling */
-#surpriseMessage {
-    margin-top: 20px;
-}
-
-.cake-image {
-    width: 100px;
-    height: auto;
-    margin-top: 10px;
 }
 
 /* Confetti overlay styling */
@@ -79,4 +66,11 @@ button:hover {
     height: 100%;
     object-fit: cover;
     opacity: 0.7; /* Light transparency for the confetti */
+}
+
+/* Cake image styling (if needed) */
+.cake-image {
+    width: 100px;
+    height: auto;
+    margin-top: 10px;
 }
