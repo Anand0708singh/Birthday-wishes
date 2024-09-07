@@ -3,19 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthday Countdown</title>
+    <title>Confetti Celebration</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Countdown to Manstsha Appi's Birthday!</h1>
-        <div id="countdown">
-            <p><span id="days"></span> Days</p>
-            <p><span id="hours"></span> Hours</p>
-            <p><span id="minutes"></span> Minutes</p>
-            <p><span id="seconds"></span> Seconds</p>
-        </div>
-        <p>until Manstsha Appi's next birthday!</p>
+        <h1>Happy Birthday, Manstsha Appi!</h1>
+        <p>Enjoy the celebration with confetti! 🎉</p>
     </div>
 
     <!-- Confetti overlay -->
@@ -24,33 +18,6 @@
     </div>
 
     <script>
-        // Set the date of Manstsha Appi's next birthday (7th September 2024)
-        const birthday = new Date('Sep 7, 2024 00:00:00').getTime();
-
-        // Update the countdown every second
-        const countdown = setInterval(function() {
-            const now = new Date().getTime();
-            const timeLeft = birthday - now;
-
-            // Calculate days, hours, minutes, and seconds
-            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-            // Display the result in the HTML
-            document.getElementById('days').innerHTML = days;
-            document.getElementById('hours').innerHTML = hours;
-            document.getElementById('minutes').innerHTML = minutes;
-            document.getElementById('seconds').innerHTML = seconds;
-
-            // If the countdown is over, display a message
-            if (timeLeft < 0) {
-                clearInterval(countdown);
-                document.getElementById('countdown').innerHTML = "It's your birthday, Manstsha Appi! 🎉🎂";
-            }
-        }, 1000); // Update every second
-
         // Switch between confetti images every 5 seconds
         let confettiImage = document.querySelector('.confetti');
         let images = ['confetti.jpg', 'confetti.webp'];
