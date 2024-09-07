@@ -1,6 +1,6 @@
-/* Body styling with confetti.webp background */
+/* Body styling with confetti.jpg background */
 body {
-    background-image: url('confetti.webp'); /* Use confetti.webp as background */
+    background-image: url('confetti.jpg'); /* Use confetti.jpg as background */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
