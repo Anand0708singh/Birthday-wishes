@@ -10,6 +10,11 @@
     <div class="container">
         <h1>Happy Birthday, Manstsha Appi!</h1>
         <p>Enjoy the celebration with confetti! 🎉</p>
+        <button id="surpriseBtn">Surprise</button>
+        <div id="surpriseMessage" class="hidden">
+            <p>Surprise! 🎁 Here's a special message just for you!</p>
+            <img src="birthday-cake.jpg" alt="Birthday Cake" class="cake-image">
+        </div>
     </div>
 
     <!-- Confetti overlay -->
@@ -27,6 +32,11 @@
             index = (index + 1) % images.length;
             confettiImage.src = images[index];
         }, 5000); // Switch image every 5 seconds
+
+        // Surprise button functionality
+        document.getElementById('surpriseBtn').addEventListener('click', function() {
+            document.getElementById('surpriseMessage').classList.toggle('hidden');
+        });
     </script>
 </body>
 </html>
