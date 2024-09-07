@@ -3,50 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday!</title>
+    <title>Birthday Countdown</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Happy Birthday, Sis!</h1>
-        <p class="message">Wishing you all the love, happiness, and joy in the world. Have an amazing day!</p>
-        <button onclick="startCountdown()">Click for a Surprise!</button>
-        
-        <!-- Countdown Section -->
-        <div id="countdown" style="display: none;">
-            <p>Surprise in <span id="timer">5</span> seconds...</p>
+        <h1>Countdown to Manstsha Appi's Birthday!</h1>
+        <div id="countdown">
+            <p><span id="days"></span> Days</p>
+            <p><span id="hours"></span> Hours</p>
+            <p><span id="minutes"></span> Minutes</p>
+            <p><span id="seconds"></span> Seconds</p>
         </div>
-
-        <!-- Surprise Section -->
-        <div id="surprise" style="display: none;">
-            <img src="cake.png" alt="Birthday Cake" class="cake">
-            <h2>You are the Best Sister Ever!</h2>
-            <p class="special-message">Here's to many more birthdays filled with laughter and love!</p>
-        </div>
+        <p>until Manstsha Appi's next birthday!</p>
     </div>
 
     <script>
-        // Function to start countdown
-        function startCountdown() {
-            const countdownDiv = document.getElementById('countdown');
-            const surpriseDiv = document.getElementById('surprise');
-            const timer = document.getElementById('timer');
-            let timeLeft = 5;
+        // Set the date of Manstsha Appi's next birthday (16th September 2024)
+        const birthday = new Date('Sep 16, 2024 00:00:00').getTime();
 
-            // Show the countdown section
-            countdownDiv.style.display = 'block';
+        // Update the countdown every second
+        const countdown = setInterval(function() {
+            const now = new Date().getTime();
+            const timeLeft = birthday - now;
 
-            const countdownInterval = setInterval(() => {
-                timeLeft--;
-                timer.textContent = timeLeft;
+            // Calculate days, hours, minutes, and seconds
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-                if (timeLeft === 0) {
-                    clearInterval(countdownInterval);
-                    countdownDiv.style.display = 'none'; // Hide countdown
-                    surpriseDiv.style.display = 'block'; // Show the surprise
-                }
-            }, 1000); // 1 second interval
-        }
+            // Display the result in the HTML
+            document.getElementById('days').innerHTML = days;
+            document.getElementById('hours').innerHTML = hours;
+            document.getElementById('minutes').innerHTML = minutes;
+            document.getElementById('seconds').innerHTML = seconds;
+
+            // If the countdown is over, display a message
+            if (timeLeft < 0) {
+                clearInterval(countdown);
+                document.getElementById('countdown').innerHTML = "It's your birthday, Manstsha Appi! 🎉🎂";
+            }
+        }, 1000); // Update every second
     </script>
 </body>
 </html>
