@@ -1,30 +1,36 @@
+/* Birthday theme background with balloons and confetti */
 body {
-    background-color: #f7e6f2;
+    background-image: url('birthday_background.jpg'); /* Add a birthday-themed background image */
+    background-size: cover;
+    background-position: center;
     font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    color: #fff; /* Make text stand out against the background */
 }
 
+/* Add a semi-transparent overlay to make text more readable */
 .container {
     text-align: center;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.85);
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    color: #ff6699;
+    color: #ff66b2; /* Bright and festive pink */
     font-size: 3rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .message {
     font-size: 1.2rem;
     margin-bottom: 20px;
-    color: #555;
+    color: #333;
 }
 
 button {
@@ -54,4 +60,10 @@ button:hover {
 .special-message {
     font-size: 1.5rem;
     color: #333;
+}
+
+/* Countdown text styling */
+#countdown p {
+    font-size: 1.5rem;
+    color: #ff66b2;
 }
