@@ -28,6 +28,38 @@ h1 {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Surprise button styling */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #ff6699;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff3366;
+}
+
+/* Hidden class for surprise message */
+.hidden {
+    display: none;
+}
+
+/* Surprise message styling */
+#surpriseMessage {
+    margin-top: 20px;
+}
+
+.cake-image {
+    width: 100px;
+    height: auto;
+    margin-top: 10px;
+}
+
 /* Confetti overlay styling */
 .confetti-overlay {
     position: absolute;
