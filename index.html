@@ -18,6 +18,11 @@
         <p>until Manstsha Appi's next birthday!</p>
     </div>
 
+    <!-- Confetti overlay -->
+    <div class="confetti-overlay">
+        <img src="confetti.jpg" alt="Confetti" class="confetti">
+    </div>
+
     <script>
         // Set the date of Manstsha Appi's next birthday (16th September 2024)
         const birthday = new Date('Sep 16, 2024 00:00:00').getTime();
@@ -45,6 +50,16 @@
                 document.getElementById('countdown').innerHTML = "It's your birthday, Manstsha Appi! 🎉🎂";
             }
         }, 1000); // Update every second
+
+        // Switch between confetti images every 5 seconds
+        let confettiImage = document.querySelector('.confetti');
+        let images = ['confetti.jpg', 'confetti.webp'];
+        let index = 0;
+
+        setInterval(() => {
+            index = (index + 1) % images.length;
+            confettiImage.src = images[index];
+        }, 5000); // Switch image every 5 seconds
     </script>
 </body>
 </html>
