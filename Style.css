@@ -1,77 +1,33 @@
-/* Body styling with confetti.jpg background */
-body {
-    background-image: url('confetti.jpg'); /* Use confetti.jpg as background */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    color: #fff;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confetti Celebration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday, Manstsha Appi!</h1>
+        <p>Enjoy the celebration with confetti! 🎉</p>
+        <a href="surprise.html" class="surprise-button">Surprise</a>
+    </div>
 
-/* Centered container with semi-transparent background */
-.container {
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent overlay */
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    <!-- Confetti overlay -->
+    <div class="confetti-overlay">
+        <img src="confetti.jpg" alt="Confetti" class="confetti">
+    </div>
 
-/* Heading styling */
-h1 {
-    color: #ff66b2; /* Festive pink */
-    font-size: 3rem;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-}
+    <script>
+        // Switch between confetti images every 5 seconds
+        let confettiImage = document.querySelector('.confetti');
+        let images = ['confetti.jpg', 'confetti.webp'];
+        let index = 0;
 
-/* Surprise button styling */
-.surprise-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: white;
-    background-color: #ff6699;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.surprise-button:hover {
-    background-color: #ff3366;
-}
-
-/* Confetti overlay styling */
-.confetti-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* So confetti doesn't block clicks */
-}
-
-/* Confetti image styling */
-.confetti {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.7; /* Light transparency for the confetti */
-}
-
-/* Cake image styling (if needed) */
-.cake-image {
-    width: 100px;
-    height: auto;
-    margin-top: 10px;
-}
+        setInterval(() => {
+            index = (index + 1) % images.length;
+            confettiImage.src = images[index];
+        }, 5000); // Switch image every 5 seconds
+    </script>
+</body>
+</html>
