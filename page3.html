@@ -5,34 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surprise Page 3</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="content">
-        <h1>Surprise Page 3</h1>
-        <p>The surprises keep coming, Manstsha Appi!</p>
-        <img src="images/cakes.jpg" alt="Birthday Cake" class="birthday-cakes">
-        <a href="index.html" class="button">Back to Start</a>
-    </div>
-
-    <script>
-        const images = [
-            'images/IMG-20230915-WA0010.jpg',
-            'images/IMG-20230902-WA0000.jpg',
-            'images/IMG-20230902-WA0001.jpg',
-            'images/IMG-20230915-WA0011.jpg',
-            'images/IMG-20230915-WA0012.jpg',
-            'images/IMG-20230915-WA0013.jpg',
-            'images/cakes.jpg'
-        ];
-
-        let currentIndex = 0;
-
-        function changeBackgroundImage() {
-            document.body.style.backgroundImage = `url(${images[currentIndex]})`;
-            currentIndex = (currentIndex + 1) % images.length;
+    <style>
+        body {
+            background-size: cover;
+            background-position: center;
         }
-
-        setInterval(changeBackgroundImage, 3000);
-    </script>
-</body>
-</html>
+        .content {
+            text-align: center;
+            padding: 50px;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .birthday-cakes {
+            width: 300px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 18px;
+            color: white;
