@@ -14,7 +14,6 @@
     </div>
 
     <script>
-        // Array of image URLs for transition
         const images = [
             'images/IMG-20230915-WA0010.jpg',
             'images/IMG-20230902-WA0000.jpg',
@@ -26,14 +25,12 @@
 
         let currentIndex = 0;
 
-        // Function to change background image
         function changeBackgroundImage() {
             document.body.style.backgroundImage = `url(${images[currentIndex]})`;
             currentIndex = (currentIndex + 1) % images.length; // Loop through images
         }
 
-        // Change image every 3 seconds (3000 milliseconds)
-        setInterval(changeBackgroundImage, 3000);
+        setInterval(changeBackgroundImage, 3000); // Change image every 3 seconds
     </script>
 </body>
 </html>
