@@ -3,32 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surprise #2 – Special Message</title>
+    <title>Surprise Page 2</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-transition-page3">
-    <div class="container">
-        <h1>Surprise #2 🎂</h1>
-        <p>A special message just for you!</p>
-        
-        <!-- Button to reveal the video -->
-        <button id="reveal-video-btn" class="video-button">Click to Play the Message</button>
-
-        <!-- Hidden video element initially -->
-        <div id="video-container" class="hidden">
-            <video id="birthday-video" width="640" controls>
-                <source src="videos/surprise-video2.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
+<body>
+    <div class="content">
+        <h1>Surprise Page 2</h1>
+        <p>Another sweet surprise for you, Manstsha Appi!</p>
+        <img src="images/cakes.jpg" alt="Birthday Cake" class="birthday-cakes">
+        <a href="page3.html" class="button">Next Surprise</a>
     </div>
 
     <script>
-        // JavaScript to show the video on button click
-        document.getElementById('reveal-video-btn').addEventListener('click', function() {
-            document.getElementById('video-container').classList.remove('hidden'); // Show video
-            document.getElementById('reveal-video-btn').style.display = 'none'; // Hide button
-        });
+        const images = [
+            'images/IMG-20230915-WA0010.jpg',
+            'images/IMG-20230902-WA0000.jpg',
+            'images/IMG-20230902-WA0001.jpg',
+            'images/IMG-20230915-WA0011.jpg',
+            'images/IMG-20230915-WA0012.jpg',
+            'images/IMG-20230915-WA0013.jpg',
+            'images/cakes.jpg'
+        ];
+
+        let currentIndex = 0;
+
+        function changeBackgroundImage() {
+            document.body.style.backgroundImage = `url(${images[currentIndex]})`;
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+
+        setInterval(changeBackgroundImage, 3000);
     </script>
 </body>
 </html>
