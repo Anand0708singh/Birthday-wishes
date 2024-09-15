@@ -6,11 +6,29 @@
     <title>Happy Birthday Manstsha Appi!</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="bg-transition-page1">
     <div class="container">
         <h1>Happy Birthday, Manstsha Appi!</h1>
-        <p>Click the button below to see your birthday surprise!</p>
-        <a href="page1.html" class="surprise-button">Click Here for Surprise!</a>
+        <p>Here’s a special message for you!</p>
+        
+        <!-- Initially hidden button to reveal the video -->
+        <button id="reveal-video-btn" class="video-button">Click to See the Video</button>
+
+        <!-- Initially hidden video element -->
+        <div id="video-container" class="hidden">
+            <video id="birthday-video" width="640" controls>
+                <source src="videos/birthday-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
     </div>
+
+    <script>
+        // JavaScript to show the video on button click
+        document.getElementById('reveal-video-btn').addEventListener('click', function() {
+            document.getElementById('video-container').classList.remove('hidden'); // Show video
+            document.getElementById('reveal-video-btn').style.display = 'none'; // Hide button
+        });
+    </script>
 </body>
 </html>
