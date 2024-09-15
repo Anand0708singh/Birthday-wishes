@@ -6,29 +6,34 @@
     <title>Happy Birthday Manstsha Appi!</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-transition-page1">
-    <div class="container">
+<body>
+    <div class="content">
         <h1>Happy Birthday, Manstsha Appi!</h1>
-        <p>Here’s a special message for you!</p>
-        
-        <!-- Button to reveal the video -->
-        <button id="reveal-video-btn" class="video-button">Click to See the Video</button>
-
-        <!-- Initially hidden video element -->
-        <div id="video-container" class="hidden">
-            <video id="birthday-video" width="640" controls>
-                <source src="videos/h.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
+        <p>Click the button below for a surprise!</p>
+        <a href="page1.html" class="button">Click Here</a>
     </div>
 
     <script>
-        // JavaScript to show the video on button click
-        document.getElementById('reveal-video-btn').addEventListener('click', function() {
-            document.getElementById('video-container').classList.remove('hidden'); // Show video
-            document.getElementById('reveal-video-btn').style.display = 'none'; // Hide button
-        });
+        // Array of image URLs for transition
+        const images = [
+            'images/IMG-20230915-WA0010.jpg',
+            'images/IMG-20230902-WA0000.jpg',
+            'images/IMG-20230902-WA0001.jpg',
+            'images/IMG-20230915-WA0011.jpg',
+            'images/IMG-20230915-WA0012.jpg',
+            'images/IMG-20230915-WA0013.jpg'
+        ];
+
+        let currentIndex = 0;
+
+        // Function to change background image
+        function changeBackgroundImage() {
+            document.body.style.backgroundImage = `url(${images[currentIndex]})`;
+            currentIndex = (currentIndex + 1) % images.length; // Loop through images
+        }
+
+        // Change image every 3 seconds (3000 milliseconds)
+        setInterval(changeBackgroundImage, 3000);
     </script>
 </body>
 </html>
