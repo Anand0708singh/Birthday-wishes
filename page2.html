@@ -3,15 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surprise Page 2</title>
+    <title>Surprise #2 – Special Message</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="bg-transition-page3">
     <div class="container">
         <h1>Surprise #2 🎂</h1>
-        <p>Enjoy a slice of cake on your special day! We wish you all the best and hope you get everything you desire!</p>
-        <img src="images/cake.jpg" alt="Birthday Cake" class="cake-image">
-        <a href="page3.html" class="next-button">Next Surprise</a>
+        <p>A special message just for you!</p>
+        
+        <!-- Button to reveal the video -->
+        <button id="reveal-video-btn" class="video-button">Click to Play the Message</button>
+
+        <!-- Hidden video element initially -->
+        <div id="video-container" class="hidden">
+            <video id="birthday-video" width="640" controls>
+                <source src="videos/surprise-video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
     </div>
+
+    <script>
+        // JavaScript to show the video on button click
+        document.getElementById('reveal-video-btn').addEventListener('click', function() {
+            document.getElementById('video-container').classList.remove('hidden'); // Show video
+            document.getElementById('reveal-video-btn').style.display = 'none'; // Hide button
+        });
+    </script>
 </body>
 </html>
