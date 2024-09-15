@@ -7,14 +7,23 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
+            background-image: url('images/IMG-20230902-WA0001.jpg');
             background-size: cover;
             background-position: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .content {
             text-align: center;
             padding: 50px;
             color: white;
             font-family: Arial, sans-serif;
+            background-color: rgba(0, 0, 0, 0.5); /* Optional: dark background for better text visibility */
+            border-radius: 10px;
         }
         .birthday-cakes {
             width: 300px;
@@ -45,26 +54,5 @@
         <img src="images/cakes.jpg" alt="Birthday Cake" class="birthday-cakes">
         <a href="page1.html" class="button">Click Here</a>
     </div>
-
-    <script>
-        const images = [
-            'images/IMG-20230915-WA0010.jpg',
-            'images/IMG-20230902-WA0000.jpg',
-            'images/IMG-20230902-WA0001.jpg',
-            'images/IMG-20230915-WA0011.jpg',
-            'images/IMG-20230915-WA0012.jpg',
-            'images/IMG-20230915-WA0013.jpg',
-            'images/cakes.jpg'
-        ];
-
-        let currentIndex = 0;
-
-        function changeBackgroundImage() {
-            document.body.style.backgroundImage = `url(${images[currentIndex]})`;
-            currentIndex = (currentIndex + 1) % images.length;
-        }
-
-        setInterval(changeBackgroundImage, 3000);
-    </script>
 </body>
 </html>
