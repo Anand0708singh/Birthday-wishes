@@ -3,31 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confetti Celebration</title>
+    <title>Happy Birthday Manstsha Appi!</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Happy Birthday, Manstsha Appi!</h1>
-        <p>Enjoy the celebration with confetti! 🎉</p>
-        <a href="surprise.html" class="surprise-button">Surprise</a>
+        <p>Click the button below to see your birthday surprise!</p>
+        <a href="page1.html" class="surprise-button">Click Here for Surprise!</a>
     </div>
-
-    <!-- Confetti overlay -->
-    <div class="confetti-overlay">
-        <img src="confetti.jpg" alt="Confetti" class="confetti">
-    </div>
-
-    <script>
-        // Switch between confetti images every 5 seconds
-        let confettiImage = document.querySelector('.confetti');
-        let images = ['confetti.jpg', 'confetti.webp'];
-        let index = 0;
-
-        setInterval(() => {
-            index = (index + 1) % images.length;
-            confettiImage.src = images[index];
-        }, 5000); // Switch image every 5 seconds
-    </script>
 </body>
 </html>
